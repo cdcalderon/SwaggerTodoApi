@@ -20,7 +20,7 @@ produces:
 paths:
   /:
      get:
-      description: "Return all todos"
+      description: "Return Todos"
       operationId: "GetAllTodos"
       parameters: []
       responses:
@@ -46,11 +46,11 @@ paths:
           $ref: "#/definitions/Todo"
       responses:
         200:
-          description: "Successful todo add"
+          description: "Successful Todo add"
       x-swagger-router-controller: "AddTodo"
   /todo/{id}:
     get:
-      description: "Get individual todo by id"
+      description: "Get individual Todo by id"
       operationId: "FindTodoById"
       produces:
       - "application/json"
@@ -77,24 +77,24 @@ definitions:
     properties:
       todo_id:
         type: "integer"
-        description: "Id for todo item"
+        description: "Id for Todo item"
       author:
         type: "string"
         description: "Todo Owner and Creator"
       todo:
         type: "string"
-        description: "The todo item"
+        description: "The Todo item"
       created_date:
         type: "string"
         format: "date-time"
-        description: "todo Timestamp"
+        description: "Todo Timestamp"
       duedate:
         type: "string"
         format: "date-time"
-        description: "When todo is due"
+        description: "When Todo is due"
       completed:
         type: "boolean"
-        description: "inform if todo has been completed or not"
+        description: "inform if Todo has been completed or not"
         
         
         
